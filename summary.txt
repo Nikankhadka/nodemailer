@@ -1,0 +1,52 @@
+this is the basic over view of what i am doing and learning through out the building process of this email sender api 
+
+//here we are using the node mailer module which makes sending mails through node easier, here i dont nedd to structure my api since
+it is simple test to check whether the api is working properly.
+
+
+//since node mailer module and its api,functions are pretty easy to use
+//node mailer can use direact passwords and send mail but if u are using verification it can be hard  or 2 step auth it is hard to setup 
+
+since node mialer is quite versatile and can work with multiple email sender service like outlook or other u can use those 
+for sending as well in place of gmail, since gmail is hard to setup, and might fail completely u can use other 
+service, basically can send mail( from cregistered mail service provider/sender account that will be company or admin accoint)
+using that can send mail to other user
+
+
+
+
+********************for Gmail*******************
+// so setp a projet in google gloud to pass in the credential along with auth data for sending the mail which is actually better 
+way to do it since u are going to setup authentivation using passport and u can use the same credential for the nodemailer aswell 
+for more secure approahc towards email sending 
+
+//there is long process so better look it up how to setup in free code camp nodemailer email sending 
+
+//store all the necessaru credential in the env file and igonre that  with gitignore 
+
+//while setting up the credential for the sender note that u need to enable less secure app in gmail, if 2 step vefication is enabled
+then u need to 
+https://stackoverflow.com/questions/26736062/sending-email-fails-when-two-factor-authentication-is-on-for-gmail
+try to follow this 
+
+
+
+
+********************************using microsoft outlook to send mail****************
+its preety easy to use just sign in with microsft accoun in the outlook and setup the outlook dont need to do extra 
+then use the same credentail with nodemailer to create transporter instance then send mail
+
+
+
+
+*******************************zoho****************************
+similarly zoho also provides multiple choice for u to use zoho to send mail first sign in in zoho then select the mailing sercive
+then setup the mail account use the mail account  ...zoho.com with the original account password(make sure to use mail account instead of main account in zzoho)
+
+
+then similarly follow thr process create transpoter instacne by passing tin the credentail annd provide mail options use sendmail functions to send the mail 
+
+
+
+*********************************send grid has its own module and api to send mail*********************
+so no need to setup nodemialer here they are very simialr to use provides the same syntax to send mail
