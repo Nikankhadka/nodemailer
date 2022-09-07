@@ -28,7 +28,7 @@ app.use(cookieParser());
 //routes
 app.post("/",async(req,res)=>{
     // we just need to pass arguments into the funtion
-   const  mail=await nodeoutlook.sendMail(req.body.reciever,req.body.content)
+   const  mail=await zoho.sendMail(req.body.reciever,req.body.content)
     res.send(mail);
 })
 

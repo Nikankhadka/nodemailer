@@ -1,13 +1,12 @@
 const nodemailer=require("nodemailer");
-
+require("dotenv").config();
 const transporter=nodemailer.createTransport({
-    
     host:"smtp.zoho.com",
     secure:true,
     port:465,
     auth:{
-        user:"nikhil.khadka.925@zohomail.com",
-        pass:"Rudramum2@"
+        user:process.env.zohouser,
+        pass:process.env.zohopass
     }
 })
 
