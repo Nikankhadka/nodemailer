@@ -12,6 +12,7 @@ const cookieParser=require("cookie-parser")
 const mailsender=require("../server/configs/nodemailer")
 const nodeoutlook=require("../server/configs/nodemaileroutlook")
 const zoho=require("../server/configs/nodemailerzoho")
+const grid=require("../server/configs/sendgrid")
 
 //middleware
 app.use(cors({origin:true}))
@@ -28,7 +29,7 @@ app.use(cookieParser());
 //routes
 app.post("/",async(req,res)=>{
     // we just need to pass arguments into the funtion
-   const  mail=await zoho.sendMail(req.body.reciever,req.body.content)
+   const  mail=await grid.sendMail(req.body.reciever,req.body.content)
     res.send(mail);
 })
 
@@ -53,6 +54,17 @@ app.get("/verify/:token",(req,res,)=>{
 
 
 
+//checking the differnce between route paramerters and query parameters
+app.get("/check/:id",(req,res)=>{ //if value is not passed then req send will invalid
+   
+//main is that route parameters are predefined id for whicht the value is passed  th url also defines the route it is compulsory value 
+//to be passed if defined
+//req.params.definedparameter
+
+
+//where as query parameters are optional and can be passed in the url as a query string which can be used to filter
+//req.query.definedparameter
+})
 
 
 

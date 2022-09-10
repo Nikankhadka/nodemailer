@@ -49,3 +49,5 @@ exports.sendmail=(reciever,content)=>{
         console.log(e)
     }
 }
+
+

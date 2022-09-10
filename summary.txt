@@ -50,3 +50,26 @@ then similarly follow thr process create transpoter instacne by passing tin the 
 
 *********************************send grid has its own module and api to send mail*********************
 so no need to setup nodemialer here they are very simialr to use provides the same syntax to send mail
+
+
+first need to create send grid account then setup web api fro email sending as u are guided with steps to do 
+.first setup an api key then use that key  not only that but also need to create a verified sender identity with 
+that is the email u are going to use as a sender in node once that is complete then can proceed with email sending applicaiton in node js 
+
+
+//install the moduels to acess api 
+npm install --save @sendgrid/mail
+simple
+import module
+then module.setapi key to setup the api key that u created in send grid 
+then similar to node mailer provide mail option pass that into the send function since its promised based the response returned will be passed
+into the argument of the callback function on .then and rr in catch
+
+
+
+
+*****************************For verificatio email sending *********************************
+first create a verification route which is going to accept the credential thrugh route para or headers. then acess to verify the toke 
+
+once that is done when verrifcaiton email is send to the user provide <a> link to the verification route and also attach the token 
+or value in the query para which is then accessed by then verification to verify the user
